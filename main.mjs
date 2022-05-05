@@ -19,3 +19,4 @@ while(true){
 
 media = soma / cont
 console.log("Média = ", media)
+process.exit()
