@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="Instagram.css">
+</head>
+
+<body>
+	<main>
+		<img src="https://cdn.discordapp.com/attachments/977933870467018792/977934319148490812/Instagram-Logo.png">
+		<div>
+			<div class="heart">
+			</div>
+			<div>
+				0
+			</div>
+		</div>
+	</main>
+	<script>
+        const domMain = document.querySelector("main")
+        // const domDivNum = document.querySelector("main div div:last-child")
+        const domDivNum = domMain.querySelector("div div:last-child")
+        let counter = 0 
+        domMain.addEventListener("click", () => {
+            counter++
+            domDivNum.innerHTML = counter
+        })
+    </script>
+</body>
+</html>
