@@ -51,19 +51,19 @@ while(true){
     // }
 
     if(isNaN(x)){
-        console.log(color.fg.red + "[ ERRO ] escreva uma nota de 0 a 10" + color.reset)
+        console.log(color.fg.red + "[ ERRO ] escreva N ou n para finalizar." + color.reset)
         continue
     }
 
     let nota = parseFloat(x)
 
     if (nota < 0 || nota > 10) {
-        console.log(color.fg.red + "[ ERRO ] escreva uma nota de 0 a 10" + color.reset)
+        console.log(color.fg.red + "[ ERRO ] escreva uma nota de 0 a 10." + color.reset)
         continue
     }
 
     cont++
-    soma = soma + nota
+    soma += nota
 }
 
 media = soma / cont
