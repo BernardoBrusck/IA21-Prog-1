@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="Instagram.css">
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #e1e1e1;
+		}
+		main{
+			width: 80vh;
+			background: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border: 1px solid #dbdbdb;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); 	
+		}
+		img{
+			width: 40vh;
+			padding: 50px
+		}
+		main>div{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding-bottom: 50px;
+		}
+		div:last-child{
+			user-select: none;
+			padding-left: 50px;
+			font-family: sans-serif;
+			font-size: 50px
+		}
+		div>div:first-child{
+			width: 80px;
+			height: 80px;
+			transform: rotate(-45deg) scale(.8);
+			background-color:rgb(179, 179, 179); 
+			transition: background 0.2s;
+		}
+		div:first-child:hover{
+			background-color:red;
+		}
+		div:first-child:before,
+		div:first-child:after{
+			content:" ";
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			background-color:inherit; 
+		}
+		div:first-child:before{
+			top: -40px;
+		}
+		div>div:first-child:after{
+			left: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<img src="https://cdn.discordapp.com/attachments/977933870467018792/977934319148490812/Instagram-Logo.png">
+		<div>
+			<div class="heart">
+			</div>
+			<div>
+				0
+			</div>
+		</div>
+	</main>
+	<script>
+        const domMain = document.querySelector("main")
+        // const domDivNum = document.querySelector("main div div:last-child")
+        const domDivNum = domMain.querySelector("div div:last-child")
+        let counter = 0 
+        domMain.addEventListener("click", () => {
+            counter++
+            domDivNum.innerHTML = counter
+        })
+    </script>
+</body>
+</html>
