@@ -45,13 +45,9 @@ while(true){
     let x = await question('\u001b[32mDigite um número: ')
 
     if (x.toLowerCase() == 'n') break
-    // else if (x < 0 || x > 10){
-    //     let x = await question('ERRO, Digite um número de 0 a 10: ')
-    //     x -= x
-    // }
 
     if(isNaN(x)){
-        console.log(color.fg.red + "[ ERRO ] escreva N ou n para finalizar." + color.reset)
+        console.log(color.fg.red + "[ ERRO ] escreva N ou n para finalizar, ou continue." + color.reset)
         continue
     }
 
